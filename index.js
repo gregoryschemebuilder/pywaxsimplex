@@ -1,6 +1,6 @@
 'use strict';
 const os = require('os');
-const APP_NAME = 'schema-validator-38f988';
+const APP_NAME = 'schema-validator-209fc2';
 const VERSION = '1.0.0';
 class UschemaUvalidatorHandler {
   constructor(options = {}) {
